@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SteganoMaster - Advanced Steganography Tool</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <h1>SteganoMaster</h1>
+                    <span>Advanced Data Hiding Tool</span>
+                </a>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#interface">Interface</a></li>
+                    <li><a href="#download">Download</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="steganoMasterSetup.exe" class="btn btn-primary" id="download-now-nav" download>Download Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hide Your Secrets in Plain Sight</h1>
+            <p>SteganoMaster is an advanced steganography tool that lets you securely hide sensitive information within ordinary files, keeping your secrets hidden from prying eyes.</p>
+            <div class="cta-buttons">
+                <a href="steganoMasterSetup.exe" class="btn btn-primary" id="download-now-hero" download>Download Now</a>
+                <a href="#features" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="section section-dark">
+        <div class="container">
+            <div class="section-title">
+                <h2>Key Features</h2>
+                <p>SteganoMaster provides powerful tools to hide, extract, and detect hidden data in various file types</p>
+            </div>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-eye-slash"></i></div>
+                    <h3>Hide Data Securely</h3>
+                    <p>Embed sensitive information within image, video, and audio files without visible alteration to the original content.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-unlock-alt"></i></div>
+                    <h3>Advanced Encryption</h3>
+                    <p>Protect your hidden data with AES-256 or DES-256 encryption for an additional layer of security.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-search"></i></div>
+                    <h3>Anomaly Detection</h3>
+                    <p>Analyze files to detect potential hidden information using sophisticated detection algorithms.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-file-alt"></i></div>
+                    <h3>Multiple File Types</h3>
+                    <p>Support for various image formats, video files, and audio files in a single intuitive interface.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Modern UI</h3>
+                    <p>Sleek, intuitive interface with live previews, progress tracking, and drag-and-drop functionality.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Privacy-Focused</h3>
+                    <p>All processing happens locally on your device, ensuring your sensitive data never leaves your computer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="section section-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>How It Works</h2>
+                <p>SteganoMaster uses advanced algorithms to hide data within the structure of various file types</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Select File</h3>
+                        <p>Load an image, video, or audio file that will be used to hide your secret information.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Enter Message</h3>
+                        <p>Type or paste the sensitive data you want to hide and choose optional encryption methods.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Encode Data</h3>
+                        <p>The application embeds your message into the file using sophisticated steganography techniques.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Save File</h3>
+                        <p>Save the new file containing your hidden message that looks visually identical to the original.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interface" class="section section-dark">
+        <div class="container">
+            <div class="section-title">
+                <h2>Intuitive Interface</h2>
+                <p>SteganoMaster provides a powerful yet easy-to-use interface for all your steganography needs</p>
+            </div>
+            <div class="interface-features">
+                <h3>Streamlined User Experience</h3>
+                <p>Our elegant and intuitive interface makes complex steganography processes simple and accessible for everyone, from beginners to security professionals.</p>
+                <div class="feature-orbit">
+                    <strong>Real-time Preview</strong>
+                    <span>See the carrier file before and after encoding</span>
+                </div>
+                <div class="feature-orbit">
+                    <strong>Tabbed Interface</strong>
+                    <span>Dedicated tabs for encoding, decoding, and detection</span>
+                </div>
+                <div class="feature-orbit">
+                    <strong>Drag and Drop</strong>
+                    <span>Simply drag files into the application for processing</span>
+                </div>
+                <div class="feature-orbit">
+                    <strong>Progress Tracking</strong>
+                    <span>Visual feedback during encoding and decoding operations</span>
+                </div>
+                <div class="feature-orbit">
+                    <strong>File Info</strong>
+                    <span>Detailed information about loaded files and available capacity</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Supported File Types</h2>
+                <p>SteganoMaster supports a wide range of file formats for your steganography needs</p>
+            </div>
+            <div class="file-types">
+                <div class="file-type image">
+                    <i class="fas fa-image"></i>
+                    <h3>Images</h3>
+                    <p>PNG, BMP, JPG, JPEG</p>
+                    <p>High-quality image steganography with minimal visual impact</p>
+                </div>
+                <div class="file-type video">
+                    <i class="fas fa-video"></i>
+                    <h3>Videos</h3>
+                    <p>MP4, AVI, MKV</p>
+                    <p>Frame-by-frame data hiding in video streams</p>
+                </div>
+                <div class="file-type audio">
+                    <i class="fas fa-music"></i>
+                    <h3>Audio</h3>
+                    <p>MP3, WAV</p>
+                    <p>Audio steganography with imperceptible changes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="section section-dark">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get SteganoMaster Today</h2>
+                <p>Start hiding your secrets securely with our powerful steganography tool</p>
+            </div>
+            <div class="download">
+                <h2>Download SteganoMaster</h2>
+                <p>Available for multiple platforms. Free for personal use.</p>
+                <a href="steganoMasterSetup.exe" class="btn btn-primary" id="download-now-main" download style="margin-top:10px;">Download Now</a>
+                <div class="platforms">
+                    <a href="#" class="btn btn-outline"><i class="fab fa-windows"></i> Windows</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section section-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Get answers to common questions about SteganoMaster</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What is steganography?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Steganography is the practice of concealing information within other non-secret data or a physical object to avoid detection. Unlike encryption, which makes data unreadable but detectable, steganography hides the very existence of the secret information.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is SteganoMaster free to use?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SteganoMaster offers a free version for personal use with all core functionalities. For advanced features and commercial usage, we offer premium licenses with additional capabilities and support options.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How secure is the data hiding process?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SteganoMaster uses advanced algorithms to embed data in ways that are extremely difficult to detect. When combined with our AES-256 or DES-256 encryption options, your hidden data is protected by multiple layers of security. However, remember that no security solution is 100% unbreakable.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Will hiding data affect the quality of my files?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SteganoMaster is designed to minimize any perceptible changes to the carrier files. For images and videos, the changes are typically invisible to the human eye. For audio files, the modifications are below the threshold of human hearing. However, very large hidden messages in small files might cause noticeable degradation.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How much data can I hide in a file?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The amount of data you can hide depends on the size and type of the carrier file. Generally, larger files can store more hidden data. SteganoMaster will automatically calculate and display the maximum capacity for each file you load.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>SteganoMaster</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 20px;">Advanced steganography tool for secure data hiding</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#interface">Interface</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 SteganoMaster. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Hidden file input for folder selection -->
+    <input type="file" id="folder-input" webkitdirectory directory multiple hidden>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
