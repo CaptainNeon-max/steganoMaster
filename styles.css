@@ -38,38 +38,63 @@ body {
 
 header {
     background: rgba(19, 20, 28, 0.95);
-    padding: 20px 0;
+    padding: 0;
     box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
+    height: 80px;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 }
 
 .logo {
     display: flex;
     align-items: center;
     text-decoration: none;
+    height: 200%;
+}
+
+.logo-svg {
+    width: auto;
+    height: 120px;
+    margin-top: -15px;
+    margin-right: 2px;
+    margin-left: -90px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(0, 212, 255, 0.5));
+}
+
+.logo:hover .logo-svg {
+    filter: drop-shadow(0 0 12px rgba(0, 212, 255, 0.9));
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .logo h1 {
     font-size: 28px;
     font-weight: bold;
     color: var(--primary);
-    margin-left: 10px;
-    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-    transition: transform 0.3s ease;
+    margin-top: -10px;
+    margin-left: 0;
+    text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
-.logo h1:hover {
+.logo:hover h1 {
     transform: scale(1.05);
+    text-shadow: 0 0 12px rgba(0, 212, 255, 0.8);
 }
 
 .logo span {
@@ -81,6 +106,7 @@ nav {
 .nav-links {
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
 .nav-links li {
@@ -93,6 +119,11 @@ nav {
     font-weight: 500;
     position: relative;
     padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
 }
 
 .nav-links a::after {
@@ -112,7 +143,7 @@ nav {
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border-radius: 5px;
     font-weight: bold;
     text-decoration: none;
@@ -127,8 +158,11 @@ nav {
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+    transform: translateY(-2px) scale(1.05);
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.6);
+    text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
+    color: white;
 }
 
 .hero {
@@ -142,7 +176,7 @@ nav {
     align-items: center;
     color: white;
     text-align: center;
-    margin-top: 76px;
+    margin-top: 70px;
     animation: bgPulse 10s infinite alternate;
 }
 
@@ -440,6 +474,7 @@ nav {
     margin: 0 auto;
     box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
     border: 1px solid rgba(0, 212, 255, 0.3);
+    color: white;
 }
 
 .platforms {
@@ -582,13 +617,21 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+    header {
+        height: 60px;
+    }
+
+    .logo-svg {
+        height: 60px;
+    }
+
     .mobile-menu-toggle {
         display: block;
     }
 
     .nav-links {
         position: absolute;
-        top: 76px;
+        top: 60px;
         left: 0;
         right: 0;
         background: var(--secondary);
@@ -609,6 +652,10 @@ footer {
         margin: 15px 0;
     }
 
+    .hero {
+        margin-top: 60px;
+    }
+
     .hero h1 { font-size: 36px; }
     .hero p { font-size: 16px; }
     .cta-buttons { flex-direction: column; gap: 15px; }
@@ -622,4 +669,43 @@ footer {
         padding-right: 20px;
     }
     .timeline-dot { left: 10px !important; right: auto !important; }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+    
+    .logo span {
+        font-size: 9px;
+    }
+
+    /* Mobile-specific keyframes */
+    @keyframes orbit {
+        0% { 
+            transform: translateY(-50%) translateX(0); 
+        }
+        50% { 
+            transform: translateY(-50%) translateX(3px); 
+        }
+        100% { 
+            transform: translateY(-50%) translateX(0); 
+        }
+    }
+
+    @keyframes textGlow {
+        0% { 
+            text-shadow: 0 0 5px rgba(0, 212, 255, 0.5); 
+        }
+        100% { 
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.8); 
+        }
+    }
+
+    @keyframes bgPulse {
+        0% { 
+            opacity: 0.85; 
+        }
+        100% { 
+            opacity: 1; 
+        }
+    }
 }
